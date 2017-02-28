@@ -19,4 +19,5 @@ END;
 1.先拷贝地址，作为工作空间中的项目检出。finish! 
 2.然后对项目作调整，右击项目属性->myeclipse->project facets->web勾上改为2.5（对应的版本改下）->添加对应的jar包->更改语言;
 3.再在project facets->web 修改web_context-root:ywglapp(这个就是对应上localhost:8080/ywglapp/。。。）
-4.buildpath里添加tomcat Server..
+4.buildpath里修改jre 1.7, 添加tomcat Server..
+5.再记得window ->preferences->Tomcat->tomcat 6.x->jdk->jdk1.7
