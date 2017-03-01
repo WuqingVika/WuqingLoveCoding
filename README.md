@@ -28,3 +28,7 @@ END;
 ## 2017/03/01 星期三
 
 - 1.TL9000项目导入时，需要右击项目-》myeclipse-》deployment assembly->add folder->default root 点击apply,然后再project facets->web->修改第二个为ROOT.
+- 2.婴儿被领养问题，查出每个婴儿最终领养情况。第一种方式：
+select b.* ,username  from baby b left join keepBabyLog k 
+on b.yid =k.yid and k.id=(select max(id) from keepBabyLog g where b.yid=g.yid)
+第二种方式：select b.* ,(select username from keepBabyLog k  where k.yid=b.yid  order by k.id desc limit 1)from baby b
