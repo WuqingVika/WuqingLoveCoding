@@ -1,10 +1,13 @@
-# WuqingLoveCoding
-学习的一点一滴
+# WuqingLoveCoding <学习的一点一滴>
+
 ## 2017/2/26
-* 1.快速删除表中数据，并将另一表tet数据插入到表haha中；
+
+- 1.快速删除表中数据，并将另一表tet数据插入到表haha中；
 truncate table haha;
 insert into haha select * from tet
+
 ## 2017/2/27 星期一
+
 + 1.如何杀pl/sql进程
 select session_id from v$locked_object; --找到锁住的sessionid为517
 SELECT sid, serial#, username, osuser FROM v$session where sid = 517;--再找到对应的。。
@@ -21,3 +24,7 @@ END;
 3.再在project facets->web 修改web_context-root:ywglapp(这个就是对应上localhost:8080/ywglapp/。。。）
 4.buildpath里修改jre 1.7, 添加tomcat Server..
 5.再记得window ->preferences->Tomcat->tomcat 6.x->jdk->jdk1.7
+
+## 2017/03/01 星期三
+
+- 1.TL9000项目导入时，需要右击项目-》myeclipse-》deployment assembly->add folder->default root 点击apply,然后再project facets->web->修改第二个为ROOT.
