@@ -36,7 +36,7 @@ on b.yid =k.yid and k.id=(select max(id) from keepBabyLog g where b.yid=g.yid)
 ## 2017/03/06 星期三
 
 - 1.TL9000项目中regionGridnamewindow.jsp弹出选择网格时，保存后关闭当前页面，并刷新页面。
-            //关闭并刷新
+           ``` //关闭并刷新
 							var win;
 							var obj;
 							if (top) {
@@ -58,3 +58,4 @@ on b.yid =k.yid and k.id=(select max(id) from keepBabyLog g where b.yid=g.yid)
 							}
 							win.close();
 							//关闭刷新 end
+```
