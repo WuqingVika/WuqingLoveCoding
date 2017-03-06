@@ -32,3 +32,29 @@ END;
 select b.* ,username  from baby b left join keepBabyLog k 
 on b.yid =k.yid and k.id=(select max(id) from keepBabyLog g where b.yid=g.yid)
 第二种方式：select b.* ,(select username from keepBabyLog k  where k.yid=b.yid  order by k.id desc limit 1)from baby b
+
+## 2017/03/06 星期三
+
+- 1.TL9000项目中regionGridnamewindow.jsp弹出选择网格时，保存后关闭当前页面，并刷新页面。
+            //关闭并刷新
+							var win;
+							var obj;
+							if (top) {
+							    win = top;
+							} else {
+							    win = window;
+							}
+							if (win.opener) {
+							    obj = win.opener;
+							} else {
+							    obj = win.dialogArguments;
+							}
+
+							if (obj.button) {
+							    obj.button.submit();
+							} else if (obj.apply) {
+
+							    obj.apply.submit();
+							}
+							win.close();
+							//关闭刷新 end
